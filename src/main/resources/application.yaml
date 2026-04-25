@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: school
+
+  # ── MongoDB ─────────────────────────────────────────────────
+  data:
+    mongodb:
+      uri: mongodb://springstudent:springstudent@localhost:27017/school_db?authSource=admin
+      database: school_db
+
+# ── Swagger ──────────────────────────────────────────────────
+springdoc:
+  packages-to-scan: net.samiayoub.school.controller
+
+# ── Logging ──────────────────────────────────────────────────
+logging:
+  level:
+    org.springframework.data.mongodb: DEBUG
+
+# ── JWT Config ───────────────────────────────────────────────
+application:
+  security:
+    jwt:
+      secret-key: E49756B4C8FAB4E48222A3E7F3B97CC330621103F418931189445EB7AF494191E0943A5D8449D087ED6500F9F637CE94A1F67A1054E912E302A09AA6639EE2B2
+      expiration: 7200000
