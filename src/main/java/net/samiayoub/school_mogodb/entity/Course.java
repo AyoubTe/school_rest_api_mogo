@@ -34,11 +34,11 @@ public class Course {
     @Field(name = "course_name")
     private String name;
 
-    @DBRef
+    @DBRef(lazy = true)
     @JsonIgnore
     private Teacher teacher;
 
-    @DBRef
+    @DBRef(lazy = true)
     @JsonIgnore
     private List<Student> students;
 }

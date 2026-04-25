@@ -36,7 +36,7 @@ public class Assignment {
     @Field(name = "due_date")
     private Date dueDate;
 
-    @DBRef
+    @DBRef(lazy = true)
     @JsonIgnore
     private List<AssignmentDetails> details;
 }

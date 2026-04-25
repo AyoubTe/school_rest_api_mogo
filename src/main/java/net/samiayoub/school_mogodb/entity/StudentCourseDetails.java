@@ -32,10 +32,10 @@ public class StudentCourseDetails {
     @Field(name = "course_id")
     private String courseId;
 
-    @DBRef
+    @DBRef(lazy = true)
     private List<Course> courses;
 
-    @DBRef
+    @DBRef(lazy = true)
     @JsonIgnore
     private GradeDetails gradeDetails;
 }

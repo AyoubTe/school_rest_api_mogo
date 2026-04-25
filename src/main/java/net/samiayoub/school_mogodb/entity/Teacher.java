@@ -21,11 +21,11 @@ public class Teacher extends User {
     @Field(name = "discipline")
     private String discipline;
 
-    @DBRef
+    @DBRef(lazy = true)
     @JsonIgnore
     School school;
 
-    @DBRef
+    @DBRef(lazy = true)
     @JsonIgnore
     private List<Course> courses;
 

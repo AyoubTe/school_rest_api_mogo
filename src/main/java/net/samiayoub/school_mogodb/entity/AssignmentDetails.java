@@ -27,7 +27,7 @@ public class AssignmentDetails {
     @Field(name = "is_done")
     private boolean isDone;
 
-    @DBRef
+    @DBRef(lazy = true)
     @JsonIgnore
     private Assignment assignment;
 }

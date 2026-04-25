@@ -97,6 +97,7 @@ public class AuthService {
                 if (school != null) {
                     teacher.setSchool(school);
                     teacher.setPassword(passwordEncoder.encode(request.password()));
+                    teacherService.createTeacher(teacher);
                     response = new RegisterResponse("Teacher Account created successfully");
                 } else {
                     response = new RegisterResponse("Id of the school did not exist");

@@ -17,7 +17,7 @@ import java.util.List;
 @Setter
 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class Student extends User {
-    @DBRef
+    @DBRef(lazy = true)
     @JsonIgnore
     private List<Course> courses;
 

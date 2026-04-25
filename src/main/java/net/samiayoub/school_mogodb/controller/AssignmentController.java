@@ -74,7 +74,7 @@ public class AssignmentController {
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteAssignment(@PathVariable String id) {
-        assignmentService.getAssignmentById(id);
+        assignmentService.deleteById(id);
     }
 
     /**

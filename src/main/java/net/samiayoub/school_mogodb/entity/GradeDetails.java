@@ -33,7 +33,7 @@ public class GradeDetails {
     @Field(name = "third_grade")
     private int gradeThree;
 
-    @DBRef
+    @DBRef(lazy = true)
     @JsonIgnore
     private StudentCourseDetails studentCourseDetails;
 }

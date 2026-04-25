@@ -31,7 +31,7 @@ public class School {
     @Field(name = "school_address")
     private String address;
 
-    @DBRef
+    @DBRef(lazy = true)
     @JsonIgnore
     List<Teacher> teachers;
 }
